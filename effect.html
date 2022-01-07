@@ -13,6 +13,7 @@
         distinctio itaque sequi nobis similique? Sequi, voluptatibus dicta explicabo quo maiores itaque esse nesciunt?
     </p>
     <p>
+        <button id="fadeToggle">FadeToggle</button>
         <button id="fadeOut">FadeOut</button><button id="fadeIn">FadeIn</button>
     </p>
     <p>
@@ -49,6 +50,18 @@
             $('#showHide').click(function () {
                 //fast, slow, milisaniye
                 $('p:first-child').toggle(10);
+            })
+
+            $('#fadeOut').click(function () {
+                $('p:first-child').fadeOut('slow');
+            })
+            $('#fadeIn').click(function () {
+                $('p:first-child').fadeIn("slow");
+            })
+
+            $('#fadeToggle').click(function () {
+                //$('p:first-child').fadeToggle(700);
+                $('p:first-child').fadeTo("slow", 0.2);
             })
         })
     </script>
