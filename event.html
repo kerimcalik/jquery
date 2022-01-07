@@ -60,6 +60,8 @@
 
             })
             */
+
+            //document.getElementById("buton").style.color = "red";
             /*
             $('#buton').on({
                 mouseover: function () {
@@ -78,6 +80,12 @@
                     $(this).css("color", "black");
                 }
             )
+
+            $('#buton').bind('click', function () {
+                alert("tıklandı");
+            })
+
+            $('#buton').unbind('click');
         })
     </script>
     <style>
@@ -94,7 +102,7 @@
     <p>
         <button id="buton">Buton</button>
     </p>
-    <button id="btn1" class="btn">Tıkla 1</button>
+    <button id="btn1" class="btn btn-primary">Tıkla 1</button>
     <button id="btn2" class="btn">Tıkla 2</button>
     <button id="btn3" class="btn">Tıkla 3</button>
     <button id="btn4" class="btn">Tıkla 4</button>
