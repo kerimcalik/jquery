@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*
+            document.getElementById('btn1').addEventListener('click', function () {
+                alert("butona tıklandı")
+            })
+            */
+
+            /*
+            $("#btn1").click(function () {
+                alert("butona tıklandı")
+            })
+
+            $("#btn1").mouseover(function () {
+                console.log("mouse nesne üzerinde geziniyor")
+            })
+
+            $("#btn1").mouseleave(function () {
+                console.log("mouse nesne üzerinden gitti")
+            })
+            */
+
+            //var person = {name: "adı", surname: "soyadı"};
+
+            //$('.btn1').on({
+            for (let index = 1; index <= 4; index++) {
+                $('#btn' + index).on({
+                    click: function () {
+                        alert("butona tıklandı")
+                    },
+                    mouseover: function () {
+                        console.log("mouse nesne üzerinde geziniyor")
+                    },
+                    mouseleave: function () {
+                        console.log("mouse nesne üzerinden gitti")
+                    }
+                })
+            }
+            //$('.btn').on({
+            /*
+            $('#btn1,#btn2').on({
+                click: function () {
+                    alert("butona tıklandı")
+                },
+                mouseover: function () {
+                    console.log("mouse nesne üzerinde geziniyor")
+                },
+                mouseleave: function () {
+                    console.log("mouse nesne üzerinden gitti")
+                }
+
+            })
+            */
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn1" class="btn">Tıkla 1</button>
+    <button id="btn2" class="btn">Tıkla 2</button>
+    <button id="btn3" class="btn">Tıkla 3</button>
+    <button id="btn4" class="btn">Tıkla 4</button>
+</body>
+
+</html>

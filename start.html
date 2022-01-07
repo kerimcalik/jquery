@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #paragraf {
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        //document.getElementById("paragraf")
+        //document.getElementsByClassName("paragraf")[0]
+        //document.getElementsByTagName("p")
+        document.getElementsByName("radio")
+
+        document.getElementsByTagName("p")[0].style.display = "none";
+
+        $("p").hide();
+        $("p").show();
+        $("#paragraf").hide();
+        $('.paragraf').hide();
+        $('input[name="radio"]').hide();
+        $('input[type="text"]').hide();
+
+        //web sayfası yüklendiğinde yürütülecek komutlar(native javascript)
+        window.onload = function () {
+
+        }
+
+        //web sayfası yüklendiğinde yürütülecek komutlar (jQuery)
+        $(document).ready(function () {
+
+        });
+
+        //web sayfası yüklendiğinde yürütülecek komutlar (jQuery)
+        $(function () {
+
+        })
+    </script>
+</head>
+
+<body>
+    <p id="paragraf" class="paragraf"></p>
+    <input type="radio" name="radio" id="">
+</body>
+
+</html>
