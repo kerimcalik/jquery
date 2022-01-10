@@ -6,9 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul>li>p {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
+    <div style="border: 1px solid red;position: relative;float: left;width: 100%;">
+        <p><button id="startAnimation">Animasyonu Başlat</button></p>
+        <div id="box" style="position: relative;width:100px;height:100px;background-color: yellow;"></div>
+    </div>
+    <div style="border:1px solid #000">
+        <ul>
+            <li>
+                <h1 id="h1">Başlık 1</h1>
+                <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure est quod commodi
+                    asperiores
+                    consectetur eveniet nisi? Amet, nobis accusantium nisi, a aperiam quas, quia voluptate debitis ad
+                    incidunt deserunt.</p>
+            </li>
+            <li>
+                <h1 id="h2">Başlık 2</h1>
+                <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure est quod commodi
+                    asperiores
+                    consectetur eveniet nisi? Amet, nobis accusantium nisi, a aperiam quas, quia voluptate debitis ad
+                    incidunt deserunt.</p>
+            </li>
+            <li>
+                <h1 id="h3">Başlık 3</h1>
+                <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure est quod commodi
+                    asperiores
+                    consectetur eveniet nisi? Amet, nobis accusantium nisi, a aperiam quas, quia voluptate debitis ad
+                    incidunt deserunt.</p>
+            </li>
+        </ul>
+    </div>
+    <p>
+        <button id="collapseButton">Paneli aç</button>
+    </p>
+    <div style="display: none;background-color: red;text-align: center;padding: 50px;">Panel</div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dicta repellat aut qui libero ad, magni,
         distinctio itaque sequi nobis similique? Sequi, voluptatibus dicta explicabo quo maiores itaque esse nesciunt?
     </p>
@@ -62,6 +100,56 @@
             $('#fadeToggle').click(function () {
                 //$('p:first-child').fadeToggle(700);
                 $('p:first-child').fadeTo("slow", 0.2);
+            })
+
+            $('#collapseButton').click(function () {
+                //$('div').slideDown();
+                $('div').slideToggle();
+            })
+
+            $('ul>li>p').hide();
+
+            /*
+            $('ul>li>h1').click(function(){
+                $(this).next().slideToggle();
+            })
+            */
+
+            for (let index = 0; index < $('ul>li').length; index++) {
+                $('#h' + (index + 1)).mouseover(function () {
+                    $('ul>li>p').hide();
+                    $('#p' + (index + 1)).slideToggle(3000);
+                })
+            }
+
+
+            $('#stopAnimation').click(function () {
+                $('#box').stop()
+            })
+            $('#startAnimation').click(function () {
+                $('#box').animate().animate().animate().fadeIn().fadeOut().slideUp()
+                $('#box').animate(
+                    {
+                        'left': '250px',
+                        'top': '+=100px',
+                        opacity: 0.3,
+                        width: '300px',
+                        height: '300px',
+                        "transform": "rotate(20deg)"
+                    },
+                    1500,
+                    function () {
+                        $(this).animate(
+                            {
+                                left: 0,
+                                top: 0
+
+                            },
+                            250
+                        )
+                    }
+                )
+
             })
         })
     </script>
