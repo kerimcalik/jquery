@@ -127,7 +127,7 @@
                 $('#box').stop()
             })
             $('#startAnimation').click(function () {
-                $('#box').animate().animate().animate().fadeIn().fadeOut().slideUp()
+                //$('#box').animate().animate().animate().fadeIn().fadeOut().slideUp()
                 $('#box').animate(
                     {
                         'left': '250px',
@@ -135,7 +135,8 @@
                         opacity: 0.3,
                         width: '300px',
                         height: '300px',
-                        "transform": "rotate(20deg)"
+                        "transform": "rotate(20deg)",
+                        backgrounColor: 'red'
                     },
                     1500,
                     function () {

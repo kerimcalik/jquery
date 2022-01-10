@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p" style="color:red;font-size:20px;font-weight:bold">Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit.
+        Tempora dolor similique nostrum quia accusantium pariatur incidunt, ut soluta id qui necessitatibus minus,
+        laborum quam sint quisquam ipsum dignissimos officiis atque!</p>
+    <div>
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    </div>
+    <p>
+        <a href="https://www.google.com">Bağlantı</a>
+    </p>
+    <p>
+        <button id="getAttr">Get Attribute</button>
+    </p>
+    <p>Lorem ipsum dolor <b>sit amet consectetur</b> adipisicing elit. Recusandae quidem incidunt optio reiciendis,
+        ratione ipsam placeat labore nulla, quia, voluptatem voluptate a ab iure doloremque iusto odit voluptatibus enim
+        ad.</p>
+    <p>
+        <input type="text" name="" id="">
+    </p>
+    <p>
+        <button id="getText">Get Text</button>
+        <button id="getHtml">Get HTML</button>
+        <button id="getVal">Get Val</button>
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //document.getElementsByTagName('p')[0].innerText = "deneme"
+        //document.getElementsByTagName('p')[0].innerHTML = "<b>deneme</b>"
+        $('#getText').click(function () {
+            console.log($('p').text())
+            $('p').text('qwe')
+        })
+        $('#getHtml').click(function () {
+            console.log($('p').html())
+            $('p').html('<pre>console.log("qwe")</pre>')
+        })
+
+        $('#getVal').click(function () {
+            $('input').val();
+            $('input').val('değer');
+        })
+
+        $('#getAttr').click(function () {
+            alert($('a').attr('href'))
+            $('a').attr('href', 'a.com');
+            $('a').css('color', 'red')
+        })
+
+        let swap = true;
+
+        $('img').click(function () {
+            /*if (swap) {
+                $(this).attr('src', 'https://www.w3schools.com/js/pic_bulbon.gif')
+                swap = false;
+            } else {
+                $(this).attr('src', 'https://www.w3schools.com/js/pic_bulboff.gif')
+                swap = true;
+            }*/
+            $(this).attr('src', 'https://www.w3schools.com/js/pic_bulbon.gif')
+
+        })
+
+        $('img').dblclick(function () {
+            $(this).attr('src', 'https://www.w3schools.com/js/pic_bulboff.gif')
+        })
+
+        //$('#p').attr('style', '')
+        $('#p').removeAttr('style');
+
+    </script>
+</body>
+
+</html>
