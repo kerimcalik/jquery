@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="afterBefore">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum obcaecati soluta magni
+        labore nihil blanditiis nobis! Nihil, quos, excepturi dolores sint soluta reprehenderit eveniet consectetur
+        quisquam alias nam nulla.</p>
+
+    <table id="data" border=1>
+
+    </table>
+    <div>
+        <button id="addPerson">Personel Ekle</button>
+        <ul>
+            <li>
+                <input type="text" placeholder="Adınız">
+                <input type="text" placeholder="Soyadınız">
+            </li>
+        </ul>
+    </div>
+    <!--Bu bölüm oturum kapatmak için-->
+    <p>Oturumu kapat: </p>
+
+    <ol>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ol>
+    <button id="addBullet">Madde ekle</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('p').append('<a href="/logout">Arı Bilgi</a>')
+            $('table').append('<tr>')
+
+            for (let index = 0; index < 4; index++) {
+                $('table').append('<td>Hücre 1</td>')
+            }
+
+            $('table').append('</tr>')
+        })
+
+        $(function () {
+            $('#addBullet').on({
+                'click': function () {
+                    $('ol').append('<li>D</li>');
+                }
+            })
+        })
+
+        $('#addPerson').click(function () {
+            $('ul').append('<li><input type="text" placeholder="Adınız"><input type="text" placeholder="Soyadınız"></li>')
+        })
+
+        $('p').prepend('<u>X</u>')
+        $('p').append('A', 'B', 'C')
+        $('p').prepend('A', 'B', 'C')
+
+        // $('#afterBefore').after('<p>Sonrası</p>')
+        // $('#afterBefore').before('<p>Öncesi</p>')
+
+        $('#afterBefore').after('<p>Sonrası</p>').before('<p>Öncesi</p>')
+    </script>
+</body>
+
+</html>
