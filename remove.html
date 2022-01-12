@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 400px;height: 150px;border:1px solid #000;background-color: blueviolet;">
+        <p id="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro! Maxime quo quasi nihil
+            delectus nemo
+            iure tempora sit mollitia, eos perferendis itaque, veniam dolor. Eum consequatur facere totam magnam!</p>
+        <button id="hide">Gizle</button>
+    </div>
+    <div style="width: 400px;height: 150px;border:1px solid #000;background-color: aqua;">
+        <p id="p1">satır 1</p>
+        <p id="p2">satır 2</p>
+        <p id="p3">satır 3</p>
+    </div>
+    <button>Öğeyi Sil</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        document.getElementsByTagName('button')[0].addEventListener('click', function () {
+            $('div>p').remove('#p3')
+        })
+        $('button').click(function () {
+            //$('div').remove()
+            //$('div>p').hide();
+            //$('div').html('');
+            //$('div').empty();
+            $('div>p').remove('#p3')
+        })
+
+        $('#hide').click(function () {
+            //tek öğe üzerine stil klası ekler
+            //$('#p10').addClass('.hide, .bold');
+            //tek öğe üzerine stil klası siler
+            //$('#p10').removeClass('hide bold');
+
+            //birden fazla öğe için stil klası ekler
+            //$('p,button,div,span').addClass('bold');
+
+            $('#p10').toggleClass('hide');
+        })
+    </script>
+</body>
+
+</html>

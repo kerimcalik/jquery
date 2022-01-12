@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Tarih t="12.01.2022" d="01/12/2022"  b="2022/8" >
+	<Currency CrossOrder="0" Kod="USD" CurrencyCode="USD">
+			<Unit>1</Unit>
+			<Isim>ABD DOLARI</Isim>
+			<CurrencyName>US DOLLAR</CurrencyName>
+			<ForexBuying>13.7209</ForexBuying>
+			<ForexSelling>13.7456</ForexSelling>
+			<BanknoteBuying>13.7113</BanknoteBuying>
+			<BanknoteSelling>13.7662</BanknoteSelling>
+			<CrossRateUSD/>
+			<CrossRateOther/>
+		
+	</Currency>
+	<Currency CrossOrder="1" Kod="AUD" CurrencyCode="AUD">
+			<Unit>1</Unit>
+			<Isim>AVUSTRALYA DOLARI</Isim>
+			<CurrencyName>AUSTRALIAN DOLLAR</CurrencyName>
+			<ForexBuying>9.8690</ForexBuying>
+			<ForexSelling>9.9334</ForexSelling>
+			<BanknoteBuying>9.8236</BanknoteBuying>
+			<BanknoteSelling>9.9930</BanknoteSelling>
+				<CrossRateUSD>1.3870</CrossRateUSD>
+				<CrossRateOther/>
+		
+	</Currency>
+	<Currency CrossOrder="2" Kod="DKK" CurrencyCode="DKK">
+			<Unit>1</Unit>
+			<Isim>DANİMARKA KRONU</Isim>
+			<CurrencyName>DANISH KRONE</CurrencyName>
+			<ForexBuying>2.0919</ForexBuying>
+			<ForexSelling>2.1022</ForexSelling>
+			<BanknoteBuying>2.0904</BanknoteBuying>
+			<BanknoteSelling>2.1070</BanknoteSelling>
+				<CrossRateUSD>6.5489</CrossRateUSD>
+				<CrossRateOther/>
+		
+	</Currency>
+	<Currency CrossOrder="9" Kod="EUR" CurrencyCode="EUR">
+			<Unit>1</Unit>
+			<Isim>EURO</Isim>
+			<CurrencyName>EURO</CurrencyName>
+			<ForexBuying>15.5908</ForexBuying>
+			<ForexSelling>15.6189</ForexSelling>
+			<BanknoteBuying>15.5799</BanknoteBuying>
+			<BanknoteSelling>15.6423</BanknoteSelling>
+				<CrossRateUSD/>
+				<CrossRateOther>1.1363</CrossRateOther>
+		
+	</Currency>	
+</Tarih>

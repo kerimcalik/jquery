@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tarih t="12.01.2022" d="01/12/2022"  b="2022/8" >
+	<Currency CrossOrder="0" Kod="USD" CurrencyCode="USD">
+			<Unit>1</Unit>
+			<Isim>ABD DOLARI</Isim>
+			<CurrencyName>US DOLLAR</CurrencyName>
+			<ForexBuying>13.7209</ForexBuying>
+			<ForexSelling>13.7456</ForexSelling>
+			<BanknoteBuying>13.7113</BanknoteBuying>
+			<BanknoteSelling>13.7662</BanknoteSelling>
+			<CrossRateUSD/>
+			<CrossRateOther/>
+		
+	</Currency>	
+</Tarih>
