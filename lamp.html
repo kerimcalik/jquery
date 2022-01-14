@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        var lamp = $('div>img');
+        const onLamp = "https://www.w3schools.com/js/pic_bulbon.gif";
+        const offLamp = "https://www.w3schools.com/js/pic_bulboff.gif";
+        var i = 0;
+        var interval = 0;
+
+
+        interval = setInterval(lampToggle, 1500);
+
+        function lampToggle() {
+            console.log("fonksiyon çalıştı i değeri: " + i)
+
+            if (i >= 0) {
+                lamp.attr('src', offLamp);
+            }
+
+            lamp[i].src = onLamp;
+
+            if (i < lamp.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
