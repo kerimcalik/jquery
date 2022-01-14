@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filmler>
+    <film sira="1" poster="" olusturmaTarihi="">
+        <adi>Tosun Paşa</adi>
+        <yil>2022</yil>
+        <tur>aksiyon</tur>
+        <dil />
+        <altyazilar>
+            <altyazi>TR</altyazi>
+            <altyazi>EN</altyazi>
+        </altyazilar>
+        <konu>
+        <![CDATA[
+        <section class="articlebody   " itemprop="articleBody" data-id="50" data-m="{&quot;i&quot;:50,&quot;p&quot;:49,&quot;n&quot;:&quot;articlebody&quot;,&quot;y&quot;:6,&quot;o&quot;:1}">
+ 
+ <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" style="position: absolute" elementtiming="TTVR.ArticleContent">
+   
+ <span class="storyimage floated inlineimage" data-aop="image">
+<span class="image" data-attrib="CNN TÜRK" data-caption="Çalışma ve Sosyal Güvenlik Bakanlığı, SSK ve Bağ-Kur kapsamındaki aylık ödemelerinde yeni bir düzenlemeye gidildiğini, bu kapsamda ödemelerin resmi tatil ya da hafta sonuna denk gelse bile zamanında ödeneceğini açıkladı." data-id="51" data-m="{&quot;i&quot;:51,&quot;p&quot;:50,&quot;n&quot;:&quot;openModal&quot;,&quot;t&quot;:&quot;articleImages&quot;,&quot;o&quot;:1}">
+ <img alt="Çalışma ve Sosyal Güvenlik Bakanlığı, SSK ve Bağ-Kur kapsamındaki aylık ödemelerinde yeni bir düzenlemeye gidildiğini, bu kapsamda ödemelerin resmi tatil ya da hafta sonuna denk gelse bile zamanında ödeneceğini açıkladı." data-src="{&quot;default&quot;:{&quot;load&quot;:&quot;default&quot;,&quot;w&quot;:&quot;27&quot;,&quot;h&quot;:&quot;20&quot;,&quot;src&quot;:&quot;//img-s-msn-com.akamaized.net/tenant/amp/entityid/AASMm2p.img?h=203&amp;w=270&amp;m=6&amp;q=60&amp;o=f&amp;l=f&quot;}}" src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AASMm2p.img?h=203&amp;w=270&amp;m=6&amp;q=60&amp;o=f&amp;l=f" style="width:27rem;height:20rem;" class="loaded">
+</span>
+<span class="caption truncate">
+ <span class="attribution">© CNN TÜRK</span>
+ Çalışma ve Sosyal Güvenlik Bakanlığı, SSK ve Bağ-Kur kapsamındaki aylık ödemelerinde yeni bir düzenlemeye gidildiğini, bu kapsamda ödemelerin resmi tatil ya da hafta sonuna denk gelse bile zamanında ödeneceğini açıkladı.
+</span>
+</span>
+Çalışma ve Sosyal Güvenlik Bakanlığı, SSK ve Bağ-Kur kapsamındaki aylık ödemelerinde yeni bir düzenlemeye gidildiğini, bu kapsamda ödemelerin resmi tatil ya da hafta sonuna denk gelse bile zamanında ödeneceğini açıkladı. <p>Bakanlıktan yapılan yazılı açıklamada, SSK ve Bağ-Kur kapsamındaki aylık ödemelerde yeni bir düzenlemeye gidildiği belirtildi.</p> <p>Sosyal Sigorta İşlemleri Yönetmeliği'nde yapılan değişikliğe göre, aylık ödemelerin resmi tatil ya da hafta sonuna denk gelse bile zamanında ödeneceği belirtilerek, "SSK ve Bağ-Kur kapsamındaki aylık ödemeleri cumartesi gününe rastlaması halinde cuma günü, pazar gününe rastlaması halinde ise pazartesi günü ödenmekteydi. Resmi tatil olan 23 Nisan ve 19 Mayıs günlerine rastlayan ödemeler de yine bir sonraki gün ya da bir önceki gün ödenmekteydi. Sosyal Sigorta İşlemleri Yönetmeliğinin 69'uncu maddesinde yapılan değişiklik ile 1 Ocak 2022 tarihinden itibaren hafta sonu ya da resmi tatil günlerine rastlayan aylık ödemelerinin aynı gün ödenmesi olanağı getirildi. Böylece sigortalı ve hak sahiplerinin ödeme günü konusunda yaşadıkları mağduriyet giderildi." denildi.</p>
+ <div class="readmore readmore2col">
+<a href="#" data-id="52" data-m="{&quot;i&quot;:52,&quot;p&quot;:50,&quot;n&quot;:&quot;readMore&quot;,&quot;t&quot;:&quot;link&quot;,&quot;o&quot;:2}" target="_blank" tabindex="0" hasenterkeydown="1">Devamını Göster</a>
+ </div>
+ 
+ 
+</section>
+        ]]>
+        </konu>
+    </film>
+    <film>
+        <adi>Tosun Paşa</adi>
+        <yil>2022</yil>
+        <tur>aksiyon</tur>
+        <dil>TR</dil>
+        <altyazilar>
+            <altyazi>TR</altyazi>
+            <altyazi>EN</altyazi>
+        </altyazilar>
+    </film>
+    <film>
+        <adi>Tosun Paşa</adi>
+        <yil>2022</yil>
+        <tur>aksiyon</tur>
+        <dil>TR</dil>
+        <altyazilar>
+            <altyazi>TR</altyazi>
+            <altyazi>EN</altyazi>
+        </altyazilar>
+    </film>
+</filmler>

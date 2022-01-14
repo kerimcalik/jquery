@@ -10,19 +10,17 @@
 
 <body>
     <button>Verileri getir</button>
+    <div></div>
     <script src="jquery-3.6.0.min.js"></script>
     <script>
         $('button').click(function () {
             var $b = $(this);
+
             $.get('today.xml', function (data, status, jqXhr) {
-                console.log(status);
-                console.log(data);
-                $b.hide()
-            }).done(function () {
-                alert("döviz verileri alındı")
-                $b.show()
-            }).fail(function (xhr, s, ex) {
-                alert("hata: " + ex);
+                //var xml = $.parseXML(data)
+                var xml = data.getElementsByTagName('Tarih')
+
+                console.log(xml[0].childNodes[1].childNodes[1].nodeValue);
             });
         })
 
