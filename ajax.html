@@ -9,19 +9,54 @@
 </head>
 
 <body>
-    <button>Verileri getir</button>
-    <div></div>
-    <script src="jquery-3.6.0.min.js"></script>
+    <button>Verileri getir
+
+    </button>
+    <div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        document.getElementsByTagName('button')
         $('button').click(function () {
-            var $b = $(this);
+            var xHttp = new XMLHttpRequest();
+            xHttp.onreadystatechange = function () {
+                if (this.status == 200 && this.readyState == 4) {
+                    getXml(this);
+                }
+            }
+
+            xHttp.open('get', 'today.xml');
+            xHttp.send();
+
+
+
+            function getXml(xml) {
+                var table = "<table border=1>";
+                var xmlDoc = xml.responseXML;
+                var currencies = xmlDoc.getElementsByTagName('Currency')
+                //console.log(currencies);
+
+                for (let index = 0; index < currencies.length; index++) {
+                    table = table + "<tr><td>" + currencies[index].getElementsByTagName('Isim')[0].childNodes[0].nodeValue + "</td><td>" + currencies[index].getElementsByTagName('ForexSelling')[0].childNodes[0].nodeValue + "</td></tr>"
+
+                }
+
+                table = table + "</table>";
+                $('div').html(table);
+            }
+
+
+
+            /*var $b = $(this);
 
             $.get('today.xml', function (data, status, jqXhr) {
-                //var xml = $.parseXML(data)
-                var xml = data.getElementsByTagName('Tarih')
+                var xmlDoc = $.parseXML(data);
+                $xml = $(xmlDoc);
 
-                console.log(xml[0].childNodes[1].childNodes[1].nodeValue);
-            });
+
+                console.log($xml.find('Tarih'))
+            });*/
         })
 
 
