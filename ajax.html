@@ -17,28 +17,53 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        document.getElementsByTagName('button')
-        $('button').click(function () {
+
+        var beforeUsd = 0;
+
+        function getCurrency() {
             var xHttp = new XMLHttpRequest();
+
             xHttp.onreadystatechange = function () {
+                //alert("state: " + this.readyState + ", status: " + this.status)
                 if (this.status == 200 && this.readyState == 4) {
                     getXml(this);
                 }
             }
-
-            xHttp.open('get', 'today.xml');
+            /*
+                        xHttp.onerror = function (ex) {
+            
+                        }
+            
+                        xHttp.onprogress = function () {
+            
+                        }
+            
+                        xHttp.onload = function () {
+            
+                        }
+            */
+            xHttp.open('get', 'https://www.tcmb.gov.tr/kurlar/today.xml');
             xHttp.send();
-
-
 
             function getXml(xml) {
                 var table = "<table border=1>";
                 var xmlDoc = xml.responseXML;
                 var currencies = xmlDoc.getElementsByTagName('Currency')
-                //console.log(currencies);
 
-                for (let index = 0; index < currencies.length; index++) {
-                    table = table + "<tr><td>" + currencies[index].getElementsByTagName('Isim')[0].childNodes[0].nodeValue + "</td><td>" + currencies[index].getElementsByTagName('ForexSelling')[0].childNodes[0].nodeValue + "</td></tr>"
+                for (let index = 0; index < currencies.length - 1; index++) {
+                    var currentUsd = currencies[index].getElementsByTagName('ForexSelling')[0].childNodes[0].nodeValue;
+
+                    if (beforeUsd == 0) beforeUsd = currentUsd;
+                    console.log(beforeUsd + "-" + currentUsd)
+                    if (beforeUsd > currentUsd) {
+                        console.log("düştü")
+                    } else if (beforeUsd == currentUsd) {
+                        console.log("değişmedi")
+                    } else if (beforeUsd < currentUsd) {
+                        console.log("yükseldi")
+                    }
+
+                    table = table + "<tr><td>" + currencies[index].getElementsByTagName('Isim')[0].childNodes[0].nodeValue + "</td><td>" + currentUsd + "</td></tr>"
 
                 }
 
@@ -57,6 +82,13 @@
 
                 console.log($xml.find('Tarih'))
             });*/
+        }
+
+        setInterval(getCurrency, 10000);
+
+        $('button').click(function () {
+
+            getCurrency();
         })
 
 
