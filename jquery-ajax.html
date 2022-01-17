@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "son-dakika.rss",
+            method: "GET",
+            dataType: "xml",
+            //cache: false,
+            //data: "id=1&adi=furkan",
+            //async: false
+            success: function (data) {
+                //console.log(data);
+                //console.log($(data).find("Currency").find("Isim").text());
+
+                /*
+                $(data).find('Currency').each(function () {
+                    console.log($(this).find('ForexSelling').text());
+                })
+                */
+
+                $(data).find('entry').each(function () {
+                    console.log($(this).find('title').text());
+                })
+            },
+            error: function (e) {
+                alert("Veri çekilirken hata oluştu: " + e)
+            },
+            beforeSend: function () {
+
+            },
+            complete: function () {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
