@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var json = { "adi": "a", "soyadi": "b" };
+
+        /*
+        
+                $.getJSON("https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+                    {
+                        "format": "json",
+                        "tags": "soldier"
+                    }
+                )
+                    .done(function (data) {
+        
+                        $.each(data.items, function (indis, deger) {
+                            //console.log(deger.media.m)
+                            $('div').append('<img src="' + deger.media.m + '">')
+                        })
+                    });
+                    */
+
+        $.getJSON("https://api.ibb.gov.tr/MetroIstanbul/api/MetroMobile/V2/GetStations",
+
+        ).done(function (veri) {
+            //console.log(veri.Data);
+            for (let index = 0; index < veri.Data.length; index++) {
+                console.log(veri.Data[index].Description)
+
+            }
+            $.each(d.Data, function (i, v) {
+                $('div').append("<p>" + v.DetailInfo.WC + "</b></p>")
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

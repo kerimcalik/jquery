@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<personeller>
+    <personel>
+        <isim>Personel A</isim>
+        <sicilNo></sicilNo>
+        <bolum></bolum>
+    </personel>
+    <personel>
+        <isim>Personel B</isim>
+        <sicilNo></sicilNo>
+        <bolum></bolum>
+    </personel>
+</personeller>

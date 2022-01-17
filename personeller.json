@@ -1,0 +1,24 @@
+{
+    "personeller": [
+        {
+            "adi": "furkan",
+            "soyadi": "soyad",
+            "yas": "20",
+            "okullar": {
+                "universiteler": [
+                    {
+                        "universite": "1"
+                    },
+                    {
+                        "universite": "2"
+                    }
+                ]
+            }
+        },
+        {
+            "adi": "gökhan",
+            "soyadi": "soyad",
+            "yas": "20"
+        }
+    ]
+}
